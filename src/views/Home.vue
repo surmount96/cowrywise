@@ -39,9 +39,7 @@
 import Loading from '@/components/Loading.vue'
 import Card from '@/components/Card.vue';
 import Modal from '@/components/Modal.vue';
-// step 1
-// fetch data while loading is set to true and search is visible
-// type input the enter to search again but input is set
+
 export default {
   name: 'Home',
   data() {
@@ -55,13 +53,6 @@ export default {
   async created() {
     await this.fetchSearch();
   },
-  // filters: {
-  //   capitalize(value) {
-  //     if(!value) return '';
-  //     value = value.toString();
-  //     return value.charAt(0).toUpperCase() + value.slice(1);
-  //   }
-  // },
   methods:{
     async fetchSearch() {
       this.loading = true;
