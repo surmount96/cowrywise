@@ -29,6 +29,7 @@ export default  {
 }
 :root{
   --color-gray: #DDE2E9;
+  --modal-border:6px;
 }
 
 @mixin viewHeight($value)
@@ -63,6 +64,7 @@ export default  {
     justify-content: flex-end;
     padding: 10px;
     color:#fff;
+    cursor: pointer;
   }
 
   & > div:nth-of-type(1) > div {
@@ -98,6 +100,9 @@ export default  {
 .justify-center{
   justify-content: center;
 }
+.justify-between{
+  justify-content: space-between;
+}
 .mb-4{
   margin-bottom: 10rem;
 }
@@ -112,6 +117,13 @@ export default  {
 @media only screen and (max-width:750px) {
   .grid{
     padding:0 5em;
+
+    & > div:nth-of-type(4) > div {
+      margin-top: 0em;
+    }
+    & > div:nth-of-type(6)  > div{
+      margin-top: 0em;
+    }
   }
 }
 @media only screen and (max-width:550px) {
