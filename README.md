@@ -1,4 +1,4 @@
-# cowrywise
+# cowrywise test
 
 ## Project setup
 ```
@@ -15,5 +15,10 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Customize configuration for .env
+Add the following to the file
+
+```
+VUE_APP_BASE_URL={url}
+VUE_APP_TOKEN={Access_token}
+```

@@ -1,7 +1,6 @@
 import apiService  from '../../config/apiService';
 
 const state = {
-    loading: false,
     singleImage:{},
     results: []
 };
