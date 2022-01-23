@@ -54,11 +54,7 @@ export default {
   },
   computed:{
     filterResults() {
-      return this.$store.state.photos.results.filter((item,index) => {
-        if(index <= 5) {
-          return item;
-        }
-      });
+      return this.$store.getters['photos/getResults'];
     }
   },
   methods:{
