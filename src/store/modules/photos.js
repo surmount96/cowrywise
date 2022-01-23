@@ -6,7 +6,15 @@ const state = {
 };
 
 
-const getters = {};
+const getters = {
+    getResults(state) {
+        return state.results.filter((item,index) => {
+            if(index <= 5) {
+              return item;
+            }
+          });;
+    }
+};
 
 const mutations = {
     SAVE_IMAGES(state,data) {

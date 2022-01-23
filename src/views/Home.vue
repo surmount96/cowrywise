@@ -23,10 +23,9 @@
         </div>
       </div>
     </header>
-  
     <loading v-if="loading"/>
     <main class="grid -mt-10 mb-4" v-else > 
-      <div v-for="(result,index) in $store.state.photos.results" :key="result.id" v-if="index <= 5 ">
+      <div v-for="(result,index) in filterResults" :key="result.id">
           <card :result="result" :id="index"/>
       </div>
     </main>
@@ -52,6 +51,15 @@ export default {
   },
   async created() {
     await this.fetchSearch();
+  },
+  computed:{
+    filterResults() {
+      return this.$store.state.photos.results.filter((item,index) => {
+        if(index <= 5) {
+          return item;
+        }
+      });
+    }
   },
   methods:{
     async fetchSearch() {
