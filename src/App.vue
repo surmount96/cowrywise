@@ -65,6 +65,11 @@ export default  {
     padding: 10px;
     color:#fff;
     cursor: pointer;
+    transition: all .5s linear;
+
+    &:hover{
+      transform: scale(.95);
+    }
   }
 
   & > div:nth-of-type(1) > div {
@@ -109,6 +114,9 @@ export default  {
 .animate-pulse{
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+.animate-zoom {
+  animation: zoomInOut 1s cubic-bezier(0.4, 0, 0.6, 1);
+}
 @media only screen and (max-width:1098px) {
   .grid{
     padding:0 10em;
@@ -146,5 +154,15 @@ export default  {
   50% {
     opacity: .7;
   }
+} 
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 } 
 </style>

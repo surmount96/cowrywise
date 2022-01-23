@@ -7,7 +7,7 @@
             </svg>
 
         </div>
-        <div class="modal_inner">
+        <div class="modal_inner" :class="{'animate-zoom': Object.entries($store.state.photos.singleImage).length > 0}">
             <div class="modal_bg" :style="`background-image: linear-gradient(to right, rgba(0,0,0,.25),rgba(0,0,0,.25)),`">
                 <img :src="$store.state.photos.singleImage.urls.regular" class="modal_bg-img"/>
             </div>
